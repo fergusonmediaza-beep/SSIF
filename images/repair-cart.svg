@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Cart Base -->
+  <rect x="80" y="120" width="240" height="120" rx="8" fill="#0066CC" opacity="0.2"/>
+  <rect x="80" y="120" width="240" height="120" rx="8" fill="none" stroke="#0066CC" stroke-width="3"/>
+  
+  <!-- Solar Panel Top -->
+  <rect x="100" y="80" width="200" height="30" rx="4" fill="#FF6B35" opacity="0.3"/>
+  <rect x="100" y="80" width="200" height="30" rx="4" fill="none" stroke="#FF6B35" stroke-width="2"/>
+  
+  <!-- Solar Panel Grid -->
+  <line x1="150" y1="80" x2="150" y2="110" stroke="#FF6B35" stroke-width="1"/>
+  <line x1="200" y1="80" x2="200" y2="110" stroke="#FF6B35" stroke-width="1"/>
+  <line x1="250" y1="80" x2="250" y2="110" stroke="#FF6B35" stroke-width="1"/>
+  <line x1="100" y1="95" x2="300" y2="95" stroke="#FF6B35" stroke-width="1"/>
+  
+  <!-- Workbench/Tool Area -->
+  <rect x="110" y="140" width="180" height="80" rx="4" fill="#10B981" opacity="0.2"/>
+  <rect x="110" y="140" width="180" height="80" rx="4" fill="none" stroke="#10B981" stroke-width="2"/>
+  
+  <!-- Tool Drawers -->
+  <rect x="120" y="150" width="40" height="20" rx="2" fill="#0A2540" opacity="0.4"/>
+  <rect x="120" y="150" width="40" height="20" rx="2" fill="none" stroke="#0A2540" stroke-width="1"/>
+  <circle cx="140" cy="160" r="2" fill="#00D4AA"/>
+  
+  <rect x="120" y="180" width="40" height="20" rx="2" fill="#0A2540" opacity="0.4"/>
+  <rect x="120" y="180" width="40" height="20" rx="2" fill="none" stroke="#0A2540" stroke-width="1"/>
+  <circle cx="140" cy="190" r="2" fill="#00D4AA"/>
+  
+  <!-- Display Tablet -->
+  <rect x="180" y="150" width="90" height="60" rx="4" fill="#000" opacity="0.8"/>
+  <rect x="180" y="150" width="90" height="60" rx="4" fill="none" stroke="#00D4AA" stroke-width="2"/>
+  <rect x="185" y="155" width="80" height="50" rx="2" fill="#00D4AA" opacity="0.3"/>
+  
+  <!-- Tools Icons -->
+  <!-- Screwdriver -->
+  <line x1="240" y1="170" x2="260" y2="150" stroke="#FF6B35" stroke-width="3"/>
+  <circle cx="262" cy="148" r="3" fill="#FF6B35"/>
+  
+  <!-- Pliers -->
+  <path d="M240 190 L250 180 L250 200 Z" fill="#0066CC" opacity="0.6"/>
+  <path d="M240 190 L250 180 L250 200 Z" fill="none" stroke="#0066CC" stroke-width="2"/>
+  
+  <!-- Lithium Battery (Power System) -->
+  <rect x="100" y="230" width="60" height="30" rx="3" fill="#10B981" opacity="0.4"/>
+  <rect x="100" y="230" width="60" height="30" rx="3" fill="none" stroke="#10B981" stroke-width="2"/>
+  <text x="130" y="250" font-size="12" fill="#10B981" font-weight="bold" text-anchor="middle">Li-ion</text>
+  
+  <!-- Lightning Bolt (Power) -->
+  <path d="M135 235 L125 245 L135 245 L125 255" fill="none" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Wheels -->
+  <circle cx="120" cy="260" r="18" fill="#0A2540" opacity="0.8"/>
+  <circle cx="120" cy="260" r="18" fill="none" stroke="#00D4AA" stroke-width="3"/>
+  <circle cx="120" cy="260" r="8" fill="#00D4AA"/>
+  
+  <circle cx="280" cy="260" r="18" fill="#0A2540" opacity="0.8"/>
+  <circle cx="280" cy="260" r="18" fill="none" stroke="#00D4AA" stroke-width="3"/>
+  <circle cx="280" cy="260" r="8" fill="#00D4AA"/>
+  
+  <!-- Storage Compartments -->
+  <rect x="240" y="230" width="70" height="25" rx="2" fill="#0066CC" opacity="0.2"/>
+  <rect x="240" y="230" width="70" height="25" rx="2" fill="none" stroke="#0066CC" stroke-width="2"/>
+  
+  <!-- Phone Icon -->
+  <rect x="260" y="235" width="15" height="25" rx="2" fill="#fff" opacity="0.6"/>
+  <rect x="260" y="235" width="15" height="25" rx="2" fill="none" stroke="#0A2540" stroke-width="1"/>
+  <circle cx="267.5" cy="256" r="1.5" fill="#0A2540"/>
+</svg>

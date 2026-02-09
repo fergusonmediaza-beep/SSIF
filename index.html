@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPF Sustainable Social Impact Fund | Recycling Capital into Impact</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <div class="spinner">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+        </div>
+        <div class="loading-text">Recycling Capital into Impact…</div>
+    </div>
+
+    <!-- MOBILE NAVIGATION OVERLAY -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- MOBILE SIDEBAR MENU -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <ul class="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="investors.html" class="track-blue">For Investors</a></li>
+            <li><a href="donors.html" class="track-green">For Donors</a></li>
+            <li><a href="assets.html">Asset Menu</a></li>
+            <li><a href="contact.html" class="cta-button" style="text-align: center; display: block;">Invest Now</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN NAVIGATION BAR -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <!-- Logo Section -->
+            <div class="logo">
+                <img src="images/logo.png" alt="EPF Logo" class="logo-image">
+            </div>
+            
+            <!-- Desktop Navigation Menu -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="investors.html" class="track-blue">For Investors</a></li>
+                <li><a href="donors.html" class="track-green">For Donors</a></li>
+                <li><a href="assets.html">Asset Menu</a></li>
+                <li><a href="contact.html" class="cta-button">Invest Now</a></li>
+            </ul>
+            
+            <!-- Mobile Hamburger Menu Button -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION - Split Screen Design -->
+    <section class="hero" id="home">
+        <!-- Blue Side: Investor Visual with Video -->
+        <div class="hero-side hero-blue">
+            <!-- Wave Pattern Background Image -->
+            <img src="images/hero-blue-waves.png" alt="" class="hero-pattern-bg">
+            
+            <div class="hero-content">
+                <div class="hero-video-container">
+                    <video autoplay muted loop playsinline>
+                        <source src="images/hero-dashboard.mp4" type="video/mp4">
+                        <div class="hero-video-placeholder">
+                            <span>Dashboard Demo</span>
+                            <small>Live demonstration of the Social Sustainable Impact Fund</small>
+                        </div>
+                    </video>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Green Side: Impact Message -->
+        <div class="hero-side hero-green">
+            <!-- Wave Pattern Background Image -->
+            <img src="images/hero-green-waves.png" alt="" class="hero-pattern-bg">
+            
+            <div class="hero-content">
+                <h1>Don't Just Spend Capital. Recycle It.</h1>
+                <h2>The first closed-loop investment fund that transforms social impact into a trackable, recoverable asset class.</h2>
+                <div class="hero-hook">
+                    South Africa doesn't have a funding problem — we have a leaky bucket problem.
+                    Capital is consumed once and disappears.
+                    <br><br>
+                    <strong>We fixed the bucket.</strong>
+                </div>
+                <a href="#solution" class="hero-cta-btn">Discover How</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE CORE CHOICE SECTION - Dual Track Navigation with Background Image -->
+    <section class="core-choice" id="solution">
+        <!-- Background Image -->
+        <img src="images/path2.png" alt="" class="choice-background-image">
+        
+        <div class="choice-container">
+            <div class="choice-header">
+                <h2>Choose Your Path</h2>
+                <p>Whether you seek financial returns or verified social impact, we offer a transparent pathway tailored to your goals.</p>
+            </div>
+            
+            <div class="choice-grid">
+                <!-- Investor Track -->
+                <div class="choice-card choice-blue">
+                    <div class="choice-icon">
+                        <img src="images/invest.png" alt="Investor Icon">
+                    </div>
+                    <h3>I Want Financial Returns</h3>
+                    <p>For Institutional, Corporate, and Retail Investors</p>
+                    <ul class="choice-benefits">
+                        <li>FSCA-regulated fund structure</li>
+                        <li>Market-linked returns with social premium</li>
+                        <li>Diversified impact portfolio</li>
+                        <li>Quarterly performance reporting</li>
+                    </ul>
+                    <a href="investors.html" class="choice-btn btn-blue">Explore Investment →</a>
+                </div>
+
+                <!-- Donor Track -->
+                <div class="choice-card choice-green">
+                    <div class="choice-icon">
+                        <img src="images/outcomes.png" alt="Donor Icon">
+                    </div>
+                    <h3>I Want Verified Outcomes</h3>
+                    <p>For Foundations, CSI Managers, and Grantors</p>
+                    <ul class="choice-benefits">
+                        <li>100% capital deployed to impact</li>
+                        <li>Real-time VSI verification</li>
+                        <li>Measurable social outcomes</li>
+                        <li>Full transparency & traceability</li>
+                    </ul>
+                    <a href="donors.html" class="choice-btn btn-green">Explore Impact →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE IMPACT DASHBOARD SECTION -->
+    <section class="dashboard-preview" id="dashboard">
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <h2>Live Impact Dashboard</h2>
+                <p>Real-time tracking through the VSI Platform</p>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card stat-primary">
+                    <div class="stat-icon-placeholder">
+                        <img src="images/capital.png" alt="Capital Icon" class="stat-icon-img">
+                    </div>
+                    <div class="stat-value" data-target="100000000">R0</div>
+                    <div class="stat-label">Initial Issuance Capacity</div>
+                </div>
+
+                <div class="stat-card stat-secondary">
+                    <div class="stat-icon-placeholder">
+                        <img src="images/briefcase.png" alt="Job Icon" class="stat-icon-img">
+                    </div>
+                    <div class="stat-value-text">R1,000 = 1 Job</div>
+                    <div class="stat-label">Verified Job Creation Base Rate</div>
+                </div>
+
+                <div class="stat-card stat-accent">
+                    <div class="stat-icon-placeholder">
+                        <img src="images/tracking.png" alt="Tracking Icon" class="stat-icon-img">
+                    </div>
+                    <div class="stat-value" data-target="100">0%</div>
+                    <div class="stat-label">Revenue Tracked Digitally via PayPoint</div>
+                </div>
+            </div>
+
+            <!-- VSI PLATFORM DASHBOARD IMAGE -->
+            <div class="vsi-dashboard-section">
+                <div class="vsi-dashboard-image">
+                    <img src="images/dashboard.png" alt="VSI Platform Dashboard" class="dashboard-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GOVERNANCE SECTION - Institutional Grade Structure -->
+    <section class="governance-section" id="governance">
+        <div class="governance-hero">
+            <div class="governance-hero-content">
+                <h1>Institutional Grade Structure</h1>
+                <p class="governance-subtext">Governance, operations, and verification handled by independent, credible entities ensuring full transparency and accountability.</p>
+            </div>
+        </div>
+
+        <div class="governance-container">
+            <!-- Governance Cards -->
+            <div class="governance-grid">
+                <!-- Card 1: Fund Manager -->
+                <div class="governance-card">
+                    <!-- Background Image -->
+                    <img src="images/1.jpg" alt="" class="card-background-image">
+                    
+                    <span class="card-badge">FSCA Regulated</span>
+                    <h3 class="card-title">Fund Manager</h3>
+                    <h2 class="card-entity">Effectus Capital Management</h2>
+                    <p class="card-description">Responsible for portfolio management, capital allocation, and regulatory compliance. Licensed and regulated to ensure institutional-grade oversight.</p>
+                </div>
+
+                <!-- Card 2: Operational Anchor -->
+                <div class="governance-card">
+                    <!-- Background Image -->
+                    <img src="images/2.jpg" alt="" class="card-background-image">
+                    
+                    <span class="card-badge">Technical Oversight</span>
+                    <h3 class="card-title">Operational Anchor</h3>
+                    <h2 class="card-entity">EPF Tech Fund</h2>
+                    <p class="card-description">Provides technical oversight, incubation support, and operational governance across all deployed capital initiatives.</p>
+                </div>
+
+                <!-- Card 3: Verification -->
+                <div class="governance-card">
+                    <!-- Background Image -->
+                    <img src="images/3.jpg" alt="" class="card-background-image">
+                    
+                    <span class="card-badge">Independent Verification</span>
+                    <h3 class="card-title">Verification & Impact</h3>
+                    <h2 class="card-entity">Visible Social Impact</h2>
+                    <p class="card-description">Independent verification of social and developmental impact metrics through the VSI Platform, ensuring measurable outcomes.</p>
+                </div>
+            </div>
+
+            <!-- Compliance Disclosure -->
+            <div class="compliance-section">
+                <div class="compliance-content">
+                    <h3 class="compliance-title">Investment Disclosure</h3>
+                    <p class="compliance-text">SSINs are medium-to-long term investment instruments with an indicative horizon of 5 years. This structure ensures separation of duties, eliminates conflicts of interest, and maintains institutional accountability throughout the investment lifecycle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-diagonal-bg"></div>
+            
+            <div class="footer-container">
+                <!-- Brand Column -->
+                <div class="footer-column footer-brand">
+                    <img src="images/logo.png" alt="EPF Logo" class="footer-logo-img">
+                    <p class="footer-tagline">Recycling Capital into Impact</p>
+                    <p class="footer-contact-intro">
+                        We connect institutional investors with measurable social impact opportunities.
+                    </p>
+                </div>
+
+                <!-- Navigation Column 1 -->
+                <div class="footer-column footer-nav">
+                    <h4 class="footer-heading">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="investors.html">For Investors</a></li>
+                        <li><a href="donors.html">For Donors</a></li>
+                    </ul>
+                </div>
+
+                <!-- Navigation Column 2 -->
+                <div class="footer-column footer-nav">
+                    <h4 class="footer-heading">Information</h4>
+                    <ul class="footer-links">
+                        <li><a href="assets.html">Asset Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column footer-contact">
+                    <h4 class="footer-heading">Get Started</h4>
+                    <p class="footer-text">
+                        <strong>Investor Inquiries:</strong><br>
+                        invest@epfund.co.za
+                    </p>
+                    <p class="footer-text">
+                        <strong>Impact Partnerships:</strong><br>
+                        impact@epfund.co.za
+                    </p>
+                    <span class="footer-badge">FSCA Regulated</span>
+                    <div class="footer-location-block">
+                        <p class="footer-text">Cape Town, South Africa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Legal Bar -->
+        <div class="footer-legal">
+            <div class="footer-container footer-legal-content">
+                <p class="footer-disclaimer">
+                    SSINs are medium-to-long term instruments (5 Years). Past performance is not indicative of future results.
+                </p>
+                <p class="footer-copyright">
+                    © 2025 EPF Sustainable Social Impact Fund
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="/js/index.js"></script>
+</body>
+</html>

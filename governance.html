@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutional Grade Structure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0A2540;
+            --accent-blue: #1E5F8C;
+            --teal: #0D9488;
+            --light-teal: #14B8A6;
+            --cream: #F8F9FA;
+            --gray-50: #F9FAFB;
+            --gray-100: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-600: #4B5563;
+            --gray-800: #1F2937;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #F8F9FA 0%, #E8EEF2 100%);
+            color: var(--gray-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            padding: 100px 20px 120px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(13, 148, 136, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(30, 95, 140, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .hero-subtext {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: -60px auto 0;
+            padding: 0 20px 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Cards Grid */
+        .governance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .governance-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 
+                0 4px 6px rgba(0, 0, 0, 0.05),
+                0 10px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .governance-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--teal), var(--light-teal));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .governance-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .governance-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 12px 24px rgba(0, 0, 0, 0.1),
+                0 20px 40px rgba(13, 148, 136, 0.15);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--teal), var(--light-teal));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            position: relative;
+            box-shadow: 0 8px 16px rgba(13, 148, 136, 0.2);
+        }
+
+        .card-icon::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--teal), var(--light-teal));
+            opacity: 0.3;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        .card-icon svg {
+            width: 36px;
+            height: 36px;
+            stroke: white;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .card-badge {
+            display: inline-block;
+            background: rgba(13, 148, 136, 0.1);
+            color: var(--teal);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            border: 1px solid rgba(13, 148, 136, 0.2);
+        }
+
+        .card-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--gray-600);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.875rem;
+        }
+
+        .card-entity {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* Flow Diagram */
+        .flow-section {
+            background: white;
+            border-radius: 24px;
+            padding: 60px 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .flow-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 50px;
+        }
+
+        .flow-diagram {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .flow-item {
+            background: linear-gradient(135deg, #F9FAFB 0%, white 100%);
+            border: 2px solid var(--gray-100);
+            border-radius: 16px;
+            padding: 24px 30px;
+            margin-bottom: 20px;
+            position: relative;
+            text-align: center;
+            font-weight: 600;
+            color: var(--gray-800);
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+        }
+
+        .flow-item:hover {
+            border-color: var(--teal);
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(13, 148, 136, 0.1);
+        }
+
+        .flow-item.highlight {
+            background: linear-gradient(135deg, var(--teal), var(--light-teal));
+            color: white;
+            border-color: var(--teal);
+            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.25);
+        }
+
+        .flow-arrow {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--teal);
+            margin: 10px 0;
+            line-height: 1;
+        }
+
+        .flow-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            margin-top: 8px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Compliance Section */
+        .compliance-section {
+            background: linear-gradient(135deg, var(--primary-blue), #153A5C);
+            border-radius: 20px;
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .compliance-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(13, 148, 136, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .compliance-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .compliance-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+
+        .compliance-text {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtext {
+                font-size: 1.125rem;
+            }
+
+            .governance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-section {
+                padding: 40px 25px;
+            }
+
+            .compliance-section {
+                padding: 40px 25px;
+            }
+        }
+
+        /* Subtle animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .governance-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .governance-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .governance-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .governance-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Institutional Grade Structure</h1>
+            <p class="hero-subtext">Governance, operations, and verification handled by independent, credible entities ensuring full transparency and accountability.</p>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Governance Cards -->
+        <div class="governance-grid">
+            <!-- Card 1: Fund Manager -->
+            <div class="governance-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="card-badge">FSCA Regulated</span>
+                <h3 class="card-title">Fund Manager</h3>
+                <h2 class="card-entity">Effectus Capital Management</h2>
+                <p class="card-description">Responsible for portfolio management, capital allocation, and regulatory compliance. Licensed and regulated to ensure institutional-grade oversight.</p>
+            </div>
+
+            <!-- Card 2: Operational Anchor -->
+            <div class="governance-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1V6" stroke-linecap="round"/>
+                        <path d="M12 18V23" stroke-linecap="round"/>
+                        <path d="M4.22 4.22L7.76 7.76" stroke-linecap="round"/>
+                        <path d="M16.24 16.24L19.78 19.78" stroke-linecap="round"/>
+                        <path d="M1 12H6" stroke-linecap="round"/>
+                        <path d="M18 12H23" stroke-linecap="round"/>
+                        <path d="M4.22 19.78L7.76 16.24" stroke-linecap="round"/>
+                        <path d="M16.24 7.76L19.78 4.22" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <span class="card-badge">Technical Oversight</span>
+                <h3 class="card-title">Operational Anchor</h3>
+                <h2 class="card-entity">EPF Tech Fund</h2>
+                <p class="card-description">Provides technical oversight, incubation support, and operational governance across all deployed capital initiatives.</p>
+            </div>
+
+            <!-- Card 3: Verification -->
+            <div class="governance-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M22 11.08V12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C13.66 2 15.24 2.43 16.62 3.19" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 4L12 14.01L9 11.01" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="card-badge">Independent Verification</span>
+                <h3 class="card-title">Verification & Impact</h3>
+                <h2 class="card-entity">Visible Social Impact</h2>
+                <p class="card-description">Independent verification of social and developmental impact metrics through the VSI Platform, ensuring measurable outcomes.</p>
+            </div>
+        </div>
+
+        <!-- Flow Diagram -->
+        <section class="flow-section">
+            <h2 class="flow-title">Accountability Framework</h2>
+            <div class="flow-diagram">
+                <div class="flow-item highlight">
+                    Investors
+                    <span class="flow-label">Capital Source</span>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-item">
+                    Effectus Capital Management
+                    <span class="flow-label">Fund Manager</span>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-item">
+                    EPF Tech Fund
+                    <span class="flow-label">Operational Anchor</span>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-item">
+                    Projects / SMEs / Infrastructure
+                    <span class="flow-label">Deployment</span>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-item highlight">
+                    Visible Social Impact (VSI)
+                    <span class="flow-label">Verification & Reporting</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance Section -->
+        <section class="compliance-section">
+            <div class="compliance-content">
+                <h3 class="compliance-title">Investment Disclosure</h3>
+                <p class="compliance-text">SSINs are medium-to-long term investment instruments with an indicative horizon of 5 years. This structure ensures separation of duties, eliminates conflicts of interest, and maintains institutional accountability throughout the investment lifecycle.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
